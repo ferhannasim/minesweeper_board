@@ -61,4 +61,10 @@ rails db:seed
 $ rails s
 ```
 
+
+### Run Test Cases
+```
+$ rspec
+```
+
 ###hit localhost:3000 in browser
