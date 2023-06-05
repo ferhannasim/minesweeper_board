@@ -1,0 +1,12 @@
+<div class="px-5 py-3">
+  <h1>list of boards</h1>
+  <small><%= link_to 'New Board', new_board_path %></small><br>
+  <small><%= link_to 'back to home', home_path %></small>
+
+  <%= form_tag boards_path, method: :get do %>
+    <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "search by board name or email..." %>
+    <%= submit_tag "Search", class: 'mt-3' %>
+  <% end %>
+  <%= render 'boards', boards: @boards %>
+  <%= will_paginate @boards %>
+</div>
